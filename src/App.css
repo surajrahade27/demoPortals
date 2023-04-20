@@ -1,0 +1,94 @@
+html * {box-sizing: border-box; margin: 0; padding: 0; scroll-behavior: smooth;}
+
+body {background-color: var(--color-bg); font-family: var(--font-family);}
+body *{font-family: var(--font-family);}
+h1, h2, h3, h4, h5, h6{font-weight: 400;}
+
+a {color: unset; text-decoration: none; -webkit-text-decoration: none;}
+
+a:-webkit-any-link{color: inherit; text-decoration: none;}
+
+input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer-spin-button {-webkit-appearance: none; margin: 0;}
+
+html .noBold{font-weight: 400;}
+html .noTextTransform{text-transform: none;}
+html .lms__Link-grey{color: #333;}
+html .lms__Link-light-grey{color: #7c7c7c;}
+html .lms__Link-grey:hover, html .lms__Link-light-grey:hover{color: var(--color-link);}
+
+html .MuiPaper-root{overflow: hidden;}
+.lms__logo{height: 64px; padding: 12px;}
+.lms__logo img{height: 40px;}
+
+.lms__icon-set{padding:0 20px;}
+.lms__icon{height: 40px; position: relative; width: 40px;}
+.lms___nav-list .lms__icon{color: #394963; width: 62px;}
+.lms__icon:before{direction: ltr !important; font-family: fntlmsiconset !important; font-size: 20px; height: 40px; line-height: 40px; left: 0; position: absolute; right: 0; text-align: center; text-transform: none !important; top: 0;}
+a.lms__icon:hover, html .lms__icon:hover{background-color: transparent; color: var(--color-link);}
+header .lms__icon + .lms__icon{margin-left: 15px;}
+.icon-small:before{font-size: 16px;}
+
+.lms__icon-search:before{content: '\0058'; font-size: 18px;}
+.lms__icon-cart:before{content: '\0063';}
+.lms__icon-bell:before{content: '\e053';}
+.lms__icon-dashboard:before{content: '\0062';}
+.lms__icon-learning:before{content: '\0070';}
+.lms__icon-skills:before{content: '\e09e'; font-size: 19px;}
+.lms__icon-knowledge:before{content: '\e061';}
+.lms__icon-team:before{content: '\007d'; font-size: 16px;}
+.lms__icon-collaboration:before{content: '\e08a';}
+.lms__icon-gamification:before{content: '\e01e'; font-size: 19px;}
+.lms__icon-instructor:before{content: '\e009';}
+.lms__icon-guide:before{content: '\0040';}
+.lms__icon-moon:before{content: '\e0a0';}
+.lms__icon-tour:before{content: '\e013';}
+.lms__icon-promotion:before{content: '\006f';}
+.lms__icon-language:before{content: '\e07d';}
+.lms__icon-gear:before{content: '\0068';}
+.lms__icon-logout:before{content: '\006c';}
+.lms__icon-eye-on:before{content: '\0079';}
+.lms__icon-eye-off:before{content: '\007a';}
+
+.lms__nav{display: flex; flex-direction: column; flex: 1 1 auto; justify-content: space-between;}
+.lms__navbar-links{display: flex; flex-direction: column; height: calc(100% - 1px); justify-content: space-between; width: var(--sidebar-width);}
+.lms__logged-in{padding: 10px;}
+
+.lms__Flex-full{flex: 1 1 auto;}
+
+html .MuiButton-text:hover{background-color: transparent; text-decoration: underline;}
+
+@-webkit-keyframes popupFromTop {
+	from {transform:translateY(-50px); opacity:0;}
+	to {transform:translateY(0); opacity:1;}
+}
+
+@keyframes popupFromTop {
+	from {transform:translateY(-50px); opacity:0;}
+	to {transform:translateY(0); opacity:1;}
+}
+
+@-webkit-keyframes popupFromLeft {
+	from {transform:translateX(-90px); opacity:0;}
+	to {transform:translateX(0); opacity:1;}
+}
+
+@keyframes popupFromLeft {
+	from {transform:translateX(-90px); opacity:0;}
+	to {transform:translateX(0); opacity:1;}
+}
+
+@media screen and (max-width: 700px){
+
+}
+
+@media screen and (max-width: 500px){
+    
+}
+
+@media screen and (min-width: 1200px){
+    .lms___nav-list::-webkit-scrollbar-track-piece, .notification-list-contents::-webkit-scrollbar-track-piece, .lms__SignUp-form::-webkit-scrollbar-track-piece{background:transparent;}
+    .lms___nav-list::-webkit-scrollbar, .notification-list-contents::-webkit-scrollbar, .lms__SignUp-form::-webkit-scrollbar{background:transparent; width:5px;}
+    .lms___nav-list:hover::-webkit-scrollbar-thumb, .notification-list-contents:hover::-webkit-scrollbar-thumb, .lms__SignUp-form:hover::-webkit-scrollbar-thumb{background:rgba(0,0,0,0.2);}
+    .lms___nav-list::-webkit-scrollbar-thumb, .notification-list-contents::-webkit-scrollbar-thumb, .lms__SignUp-form::-webkit-scrollbar-thumb{background:rgba(0,0,0,0); border-right:2px solid #fff; border-radius:10px;}
+    .lms___nav-list::-webkit-resizer, .lms___nav-list::-webkit-scrollbar-button, .lms___nav-list::-webkit-scrollbar-corner, .lms__SignUp-form::-webkit-resizer, .lms_SignUp-form::-webkit-scrollbar-button, .lms__SignUp-form::-webkit-scrollbar-corner{display:none;}
+}

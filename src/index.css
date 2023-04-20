@@ -1,0 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap');
+@import url('./font-icons/font-icons.css');
+
+:root {
+    --font-family: 'Roboto', sans-serif;
+    --sidebar-width: 256px;
+
+    --color-bg: #fff;
+    --color-link: #0071dc;
+    --card-border-radius: 0.27rem;
+
+}
