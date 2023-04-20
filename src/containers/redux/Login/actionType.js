@@ -1,0 +1,7 @@
+export const LOGIN_STARTED = 'LOGIN_STARTED'
+export const LOGIN_SUCCESS = 'LOGIN_SUCCESS'
+export const LOGIN_FAIL = 'LOGIN_FAIL'
+// export const GENERATE_CODE_SUCCESS = 'GENERATE_CODE_SUCCESS'
+// export const VERIFY_CODE_SUCCESS = 'VERIFY_CODE_SUCCESS'
+
+export const LOGOUT = 'LOGOUT'

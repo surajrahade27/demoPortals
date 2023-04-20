@@ -1,0 +1,75 @@
+import { React, useEffect, useState} from 'react'
+import Box from '@mui/material/Box';
+import TextField from '@mui/material/TextField';
+import Button from '@mui/material/Button';
+import { useNavigate } from 'react-router-dom'
+import { useDispatch, useSelector } from 'react-redux';
+import { loginInitiate } from '../../redux/Login/actions';
+import Link from '@mui/material/Link';
+import Header from '../../Header'
+
+const Login = () => {
+    const [state, setState] = useState({
+        username: "",
+        password: "",
+    });
+    const [errors, setErrors] = useState("");
+    let dispatch = useDispatch();
+    // const {username, password} = state;
+    const navigate = useNavigate();
+    let {user} = useSelector((state) => state.auth);
+
+    useEffect (() => {
+      if(user){
+        navigate("/home");
+      }
+    },[user]);
+
+    const handleInputChange = (v) =>{
+        let {name, value} = v.target;
+        setState({...state, [name]:value});
+    }
+
+    const handleSubmit = (e) =>{
+        e.preventDefault();
+     if(!state.username || !state.password){
+        setErrors("Please enter valid username and password!!")
+        console.log(errors)
+     }else{
+        dispatch(loginInitiate(state));
+        setErrors("")
+     }
+    }
+
+  return (
+    <div>
+      
+      <h3>LMS User Login</h3>
+      <h3 style={{color: "red"}}>{errors}</h3>
+      <Box
+      component="form"
+      sx={{
+        '& > :not(style)': { m: 1, width: '45ch', innerHeight: '10ch' },
+      }}
+      noValidate
+      autoComplete="off"
+      onSubmit={handleSubmit}
+    >
+      
+      <TextField id="username" name="username" label="Enter Username" type="email" value={state.username} onChange={handleInputChange} /> <br />
+      <TextField id="password" name="password" label="Enter Password" type="password" value={state.password} onChange={handleInputChange} /> <br />
+      <Button 
+      variant='contained' 
+      color='primary'
+       type='submit'
+       style={{width: "100px"}}
+      >
+        Submit
+       </Button>
+       
+    </Box>
+    </div>
+  )
+}
+
+export default Login;
