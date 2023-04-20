@@ -1,0 +1,7 @@
+.lms__header{transition:all 200ms ease-in; -webkit-animation:popupFromTop .5s; animation:popupFromTop .5s;}
+.lms__header-icon-set{display: flex; padding: 0 12px;}
+.lms__header-icon-set .lms__icon{height: 64px; width: 60px;}
+.lms__header-icon-set .lms__icon::before{line-height: 64px;}
+
+.lms__dot-update{background-color: #dc143c; border: 2px solid #fff; border-radius: 10px; height: 11px; position: absolute; right: 15px; top: 15px; width: 11px;}
+.lms__badge-count{background-color: #0071dc; border-radius: 16px; color: #fff; font-size: 12px; font-weight: 700; line-height: 18px; padding: 0 5px; position: absolute; right: 10px; top: 10px; text-align: center; min-width: 18px;}

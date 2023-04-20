@@ -1,0 +1,29 @@
+html .lms__Login-option-links button{min-width: 10px !important; padding: 0;}
+html .lms__Login-option-links button:not(:last-of-type){border: none !important; margin-right: 15px;}
+
+.lms__Login{height: 100vh; overflow: hidden;}
+html .lms__Login-sections{flex-wrap: nowrap; height: 100%;}
+.lms__Login-figure{align-items: flex-end; background:url(../../assets/bg-login.jpg) no-repeat center var(--color-link); background-size: cover; padding: 3rem; display: flex; flex-direction: column; transition:all 200ms ease-in; -webkit-animation:popupFromLeft .5s; animation:popupFromLeft .5s;}
+.lms__Login-figure h1{color: #fff; font-size: 5rem; font-weight: 700; line-height: 1; background: -webkit-linear-gradient(45deg, #09009f, #00ff95 80%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;}
+.lms__Login-data{overflow-x: hidden; overflow-y: auto;}
+html .lms__Login-contents{align-items: center; display: flex; flex-direction: column; /* justify-content: space-between; */ height: 100%; transition:all 200ms ease-in; -webkit-animation:popupFromTop .5s; animation:popupFromTop .5s;}
+html .lms__Login-heading{font-size: 1.6rem; font-weight: 700;}
+.lms__Login-subheading{font-size: 1em; padding-top: 10px;}
+.lms__Login-logo{align-self: flex-start; padding: 40px 0;}
+.lms__Login-logo img{display: block; height: 70px;}
+lms__Login-subheading
+.lms__Login-form{width: 100%;}
+.lms__Login-form > li + li{padding-top: 1.8rem;}
+
+.lms__SignUp-form{display: flex; flex-direction: column; overflow-x: hidden; overflow-y: auto;}
+
+.lms_Login-footer-spacer{height: 150px;}
+
+@media screen and (max-width: 900px){
+    /* .lms__Login-figure{display: none;} */
+    html .lms__Login-sections{height: auto; justify-content: center;}
+    .lms__Login-figure{bottom: 0; left: 0; position: fixed; right: 0; top: 0; z-index: -1;}
+    html .lms__Login-contents{background-color: #fff; bottom: 20px; height: auto; justify-content: flex-start; left: 20px; overflow-x: hidden; overflow-y: auto; padding: 0 40px; position: fixed; right: 20px; top: 20px; width: auto;}
+    .lms_Login-footer-spacer{display: none;}
+    
+}
