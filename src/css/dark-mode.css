@@ -1,0 +1,7 @@
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+html{color:#9ca3af;}
+body{background-color:#1b2531;}
+
+.layout-menu, .app-header{background-color:#283142;}
